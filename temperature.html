@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #fbb034;
+background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+font-family: 'Roboto', sans-serif;
+color: #2471A3;
+        }
+        h1{
+            font-size: 35px;
+            transition-duration: 0.5s;
+        }
+        h2{
+            font-size: 25px;
+            transition-duration: 0.5s;
+        }
+        button{
+            height: 40px;
+            width: 150px;
+            border-radius: 3px;
+            border-color: skyblue;
+            background-color: rgb(47, 47, 47);
+            color: white;
+            font-size: 15px;
+            transition-duration: 0.5s;
+        }
+        button:hover{
+            background-color: skyblue;
+           border-color: skyblue;
+           border-top: black;
+        }
+        h1:hover{
+           transform: scale(1.2);
+           text-decoration: underline;
+        }
+        h2:hover{
+            transform: scale(1.2); 
+            text-decoration: underline;
+        }
+        input{
+          border-radius: 3px; 
+          border: none; 
+          height: 20px;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <h2>Temperature in Fahrenheit</h2>
+    <input type="number" class="f">
+    <br>
+    <br>
+    <button onclick="calc()">Calculate to Celsius</button>
+    <h1 id="output1">Output 1</h1>
+    <script>
+        function calc(){
+                var fahrenheit=document.querySelector(".f").value
+                var celsius=(fahrenheit-32)*5/9;
+                document.querySelector("#output1").innerHTML=celsius;
+        }
+    </script>
+</body>
+</html>
